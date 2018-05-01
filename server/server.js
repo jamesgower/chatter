@@ -16,16 +16,16 @@ io.on('connection', socket => {
 
 	socket.emit('newMessage', {
 		from: 'bill@example.com',
-		text: 'Hey! test'
-	}); 
-
-	socket.on('createMessage', (message) => {
-		console.log('New message:', message);
+		text: 'Hey! test',
 	});
+});
 
-	socket.on('disconnect', socket => {
-		console.log('User was disconnected.');
-	});
+socket.on('createMessage', message => {
+	console.log('New message:', message);
+});
+
+socket.on('disconnect', socket => {
+	console.log('User was disconnected.');
 });
 
 server.listen(port, () => {
