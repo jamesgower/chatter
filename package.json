@@ -6,6 +6,9 @@
   "scripts": {
     "start": "nodemon server/server.js"
   },
+  "engines": {
+    "node": "9.5.0"
+  },
   "author": "James Gower",
   "license": "ISC",
   "dependencies": {
