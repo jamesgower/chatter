@@ -1,4 +1,4 @@
-var socket = io();
+const socket = io();
 
 socket.on('connect', function() {
 	console.log('Connected to server.');
@@ -9,16 +9,17 @@ socket.on('disconnect', function() {
 });
 
 socket.on('newMessage', function(message) {
-	console.log('Message received:', message);
-	var li = jQuery('<li></li>');
-	li.text(`${message.sender}: ${message.text}`);
+	const formattedTime = moment(message.createdAt).format('h:mm a');
+	const li = jQuery('<li></li>');
+	li.text(`${message.sender} ${formattedTime}: ${message.text}`);
 	jQuery('#messages').append(li);
 });
 
 socket.on('newLocationMessage', function(message){
-	var li = jQuery('<li></li>');
-	var a = jQuery('<a target="_blank">My current location</a>')
-	li.text(`${message.sender}: `);
+	const formattedTime = moment(message.createdAt).format('h:mm a');	
+	const li = jQuery('<li></li>');
+	const a = jQuery('<a target="_blank">My current location</a>')
+	li.text(`${message.sender} ${formattedTime}: `);
 	a.attr('href', message.url);
 	li.append(a);
 	jQuery('#messages').append(li);
