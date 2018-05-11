@@ -52,6 +52,18 @@ socket.on('newMessage', function(message) {
 	scrollToBottom();
 });
 
+socket.on('newMessageSent', function(message) {
+	const formattedTime = moment(message.createdAt).format('h:mm a');	
+	const template = jQuery('#message-template-sent').html();
+	const html = Mustache.render(template, {
+		sender: message.sender, 
+		text: message.text,
+		createdAt: formattedTime,
+	});
+	jQuery('#messages').append(html);
+	scrollToBottom();
+});
+
 socket.on('newLocationMessage', function(message) {
 	const formattedTime = moment(message.createdAt).format('h:mm a');
 	const template = jQuery('#location-message-template').html();
@@ -64,9 +76,20 @@ socket.on('newLocationMessage', function(message) {
 	scrollToBottom();
 });
 
+socket.on('newLocationMessageSent', function(message) {
+	const formattedTime = moment(message.createdAt).format('h:mm a');
+	const template = jQuery('#location-message-template-sent').html();
+	const html = Mustache.render(template, {
+		sender: message.sender,
+		createdAt: formattedTime,
+		url: message.url,
+	});
+	jQuery('#messages').append(html);
+	scrollToBottom();
+});
+
 jQuery('#message-form').on('submit', function(e) {
 	e.preventDefault();
-
 	const messageTextbox = jQuery('[name=message]');
 	socket.emit(
 		'createMessage',

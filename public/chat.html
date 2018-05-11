@@ -3,9 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link href="/css/styles.css" rel="stylesheet">
 	<title>Chat | Chatter</title>
+	<script data-main="js" src="/js/lib/require.js"></script>
 </head>
 
 <body class="chat">
@@ -16,21 +17,36 @@
 
 	<div class="chat__main">
 		<ol id="messages" class="chat__messages"></ol>
-
 		<div class="chat__footer">
 			<form id="message-form">
-				<input name="message" placeholder="Message" autofocus autocomplete="off"/>
+				<input name="message" placeholder="Message" autofocus autocomplete="off" />
 				<button>Send</button>
 			</form>
 			<button id="send-location">Send Location</button>
 		</div>
 	</div>
-	
+
 	<script id="message-template" type="text/template">
 		<li class="message">
 			<div class="message__title">
 				<h4>{{sender}}</h4>
-				<span>{{createdAt}}</span>
+				<p class="timestamp">
+					<em>{{createdAt}}</em>
+				</p>
+			</div>
+			<div class="message__body">
+				<p>{{text}}</p>
+			</div>
+		</li>
+	</script>
+
+	<script id="message-template-sent" type="text/template">
+		<li class="message-sent">
+			<div class="message__title">
+				<h4>{{sender}}</h4>
+				<p class="timestamp">
+					<em>{{createdAt}}</em>
+				</p>
 			</div>
 			<div class="message__body">
 				<p>{{text}}</p>
@@ -39,16 +55,33 @@
 	</script>
 
 	<script id="location-message-template" type="text/template">
-		<li class="message">
+		<div class="message">
 			<div class="message__title">
 				<h4>{{sender}}</h4>
-				<span>{{createdAt}}</span>
+				<p class="timestamp">
+					<em>{{createdAt}}</em>
+				</p>
 			</div>
 			<div class="message__body">
 				<a href="{{url}}" target="_blank">My current location</a>
 			</div>
-		</li>
+		</div>
 	</script>
+
+	<script id="location-message-template-sent" type="text/template">
+		<div class="message-sent" style={{background: 'red'}}>
+			<div class="message__title">
+				<h4>{{sender}}</h4>
+				<p class="timestamp">
+					<em>{{createdAt}}</em>
+				</p>
+			</div>
+			<div class="message__body">
+				<a href="{{url}}" target="_blank">My current location</a>
+			</div>
+		</div>
+	</script>
+
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="/js/lib/jquery-3.3.1.min.js"></script>
 	<script src="/js/lib/moment.js"></script>
