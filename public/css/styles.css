@@ -9,7 +9,7 @@ button:hover {
 	color: rgb(66, 66, 66) !important;
 	float: right !important;
 	text-align: right;
-	width: 100px;
+	width: 100%;
 }
 
 .chat__messages,
