@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link href="/css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	    crossorigin="anonymous">
 	<title>Chat | Chatter</title>
 	<script data-main="js" src="/js/lib/require.js"></script>
 </head>
@@ -44,6 +46,21 @@
 		<li class="message-sent">
 			<div class="message__title">
 				<h4>{{sender}}</h4>
+				<p class="timestamp">
+					<em>{{createdAt}}</em>
+				</p>
+			</div>
+			<div class="message__body">
+				<p>{{text}}</p>
+			</div>
+		</li>
+	</script>
+
+	<script id="message-template-admin" type="text/template">
+		<li class="message-admin">
+			<div class="message__title">
+				<h4>
+					<i class="icon fas fa-lock"/>{{sender}}</h4>
 				<p class="timestamp">
 					<em>{{createdAt}}</em>
 				</p>

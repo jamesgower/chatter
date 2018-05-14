@@ -245,3 +245,33 @@ button:disabled {
 	margin-right: -14px;
 	margin-bottom: -22px;
 }
+
+.message-admin {
+	float: left;
+	clear: both;
+	position: relative;
+	background: #ff04047c;
+	border-radius: .4em;
+	padding: 10px;
+	margin-bottom: 32px;
+}
+
+.message-admin:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 40px;
+	width: 0;
+	height: 0;
+	border: 22px solid transparent;
+	border-top-color: #ff04047c;
+	border-bottom: 0;
+	border-right: 0;
+	margin-right: -14px;
+	margin-bottom: -22px;
+}
+
+.icon {
+	display: inline !important;
+	padding: 5px;
+}

@@ -32,11 +32,11 @@ io.on('connection', socket => {
         // io.to(params.room).emit //sends an event to everybody in the targeted room
         // socket.broadcast.to(params.room).emit //sends a message to everybody in the
         // targeted room apart from the one that sent it
-        socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app.'));
+        socket.emit('newMessageAdmin', generateMessage('Admin', `Welcome to the ${params.room} room.`));
         socket
             .broadcast
             .to(params.room)
-            .emit('newMessage', generateMessage('Admin', `${params.name} has joined the chat room.`));
+            .emit('newMessageAdmin', generateMessage('Admin', `${params.name} has joined the chat room.`));
         callback();
     });
 
