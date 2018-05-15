@@ -1,0 +1,32 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true,
+		"jquery": true,
+		"jest": true
+	},
+	"extends": "eslint:recommended",
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"jsx": true,
+			"arrowFunctions": true
+		},
+		"sourceType": "module"
+	},
+	"plugins": ["react", "jquery", "dollar-sign"],
+	"rules": {
+		"indent": [0, "tab"],
+		"linebreak-style": [0, "windows"],
+		"quotes": [0, "single"],
+		"semi": ["error", "always"],
+		"react/no-unknown-property": 2,
+		"react/jsx-uses-vars": 2,
+        "react/jsx-uses-react": 2,
+        "react/jsx-indent": [2, "tab"],
+		"dollar-sign/dollar-sign": [0, "ignoreProperties"]		,
+		"no-console": 0
+	}
+}

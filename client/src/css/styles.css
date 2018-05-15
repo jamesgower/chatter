@@ -1,5 +1,5 @@
-button,
-button:hover {
+.button__chatter,
+.button__chatter:hover {
 	border: none;
 	color: #fff;
 	padding: 10px
@@ -17,10 +17,16 @@ button:hover {
 	list-style-type: none
 }
 
+ol {
+	padding: 5px !important;
+}
+
+p {
+	margin: 0 !important;
+}
+
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
 	font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
 	font-size: .95rem
@@ -33,21 +39,21 @@ ul {
 
 h3 {
 	font-weight: 600;
-	text-align: center;
+	text-align: center !important;
 	font-size: 1.5rem
 }
 
-button {
+.button__chatter {
 	background: #265f82;
 	cursor: pointer;
 	transition: background .3s ease
 }
 
-button:hover {
+.button__chatter:hover {
 	background: #1F4C69
 }
 
-button:disabled {
+.button__chatter:disabled {
 	cursor: default;
 	background: #698ea5
 }
@@ -72,7 +78,7 @@ button:disabled {
 	border-radius: 5px;
 	padding: 0 20px;
 	margin: 20px;
-	width: 230px
+	width: 330px
 }
 
 .form-field {
@@ -125,7 +131,6 @@ button:disabled {
 .chat__sidebar li {
 	border: 1px solid #e1e1e1;
 	border-radius: 5px;
-	margin: 10px
 }
 
 .chat__main {
@@ -169,12 +174,12 @@ button:disabled {
 
 .message__title h4 {
 	font-weight: 600;
-	margin-right: 10px
+	margin-right: 10px;
+	font-size: 16px;
 }
 
 .message__title span {
 	color: #999;
-	font-size: 8px !important;
 }
 
 @media (max-width:600px) {
@@ -197,13 +202,15 @@ button:disabled {
 
 .message {
 	position: relative;
-	background: #0be200;
+	background: #0eff0293;
 	border-radius: .4em;
 	color: black;
 	padding: 10px;
 	float: left;
 	clear: both;
-	margin-bottom: 32px;	
+	margin-bottom: 32px;
+	min-width: 200px;
+	max-width: 500px;	
 }
 
 .message:after {
@@ -214,7 +221,7 @@ button:disabled {
 	width: 0;
 	height: 0;
 	border: 22px solid transparent;
-	border-top-color: #0be200;
+	border-top-color: #0eff0293;
 	border-bottom: 0;
 	border-left: 0;
 	margin-left: -14px;
@@ -225,10 +232,12 @@ button:disabled {
 	float: right;
 	clear: both;
 	position: relative;
-	background: #00aabb;
+	background: #00fff2a6;
 	border-radius: .4em;
 	padding: 10px;
 	margin-bottom: 32px;
+	min-width: 200px;
+	max-width: 500px;
 }
 
 .message-sent:after {
@@ -239,7 +248,7 @@ button:disabled {
 	width: 0;
 	height: 0;
 	border: 22px solid transparent;
-	border-top-color: #00aabb;
+	border-top-color: #00fff2a6;
 	border-bottom: 0;
 	border-right: 0;
 	margin-right: -14px;
@@ -254,20 +263,22 @@ button:disabled {
 	border-radius: .4em;
 	padding: 10px;
 	margin-bottom: 32px;
+	min-width: 200px;
+	max-width: 600px;
 }
 
 .message-admin:after {
 	content: '';
 	position: absolute;
 	bottom: 0;
-	right: 40px;
+	left: 40px;
 	width: 0;
 	height: 0;
 	border: 22px solid transparent;
 	border-top-color: #ff04047c;
 	border-bottom: 0;
-	border-right: 0;
-	margin-right: -14px;
+	border-left: 0;
+	margin-left: -14px;
 	margin-bottom: -22px;
 }
 

@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js",
-    "test": "mocha server/**/*.test.js",
-    "test-watch": "nodemon --exec \"npm run test\""
+    "start": "nodemon client/src/server/server.js",
+    "test": "mocha client/src/server/**/*.test.js",
+    "test-watch": "nodemon --exec \"npm run test\"",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "engines": {
     "node": "9.5.0"
@@ -15,8 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
-    "javascript-time-ago": "^1.0.30",
     "moment": "^2.22.1",
     "requirejs": "^2.3.5",
     "socket.io": "^2.1.0"
