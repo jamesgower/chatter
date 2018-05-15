@@ -23,6 +23,9 @@ class Users {
 		const namesArr = users.map(user => user.name); //return array of users names
 		return namesArr;
 	}
+	getRoomSize(room) {
+		return this.users.filter(user => user.room === room).length;
+	}
 }
 
 module.exports = { Users };

@@ -16,6 +16,10 @@ class Chat extends React.Component {
         };
     }
 
+    componentDidMount() {
+        document.title = `${this.props.params.room} | Chatter`
+    }
+
     render() {
 
         const socket = io(this.state.endpoint);

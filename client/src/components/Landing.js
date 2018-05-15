@@ -11,6 +11,7 @@ import {
     Tooltip
 } from 'reactstrap';
 import Chat from './Chat';
+import io from 'socket.io';
 import {isRealString} from '../server/utils/validation';
 
 class Landing extends React.Component {
@@ -28,6 +29,12 @@ class Landing extends React.Component {
         this.toggleDropDown = this
             .toggleDropDown
             .bind(this);
+    }
+
+    componentWillMount() {
+        document.title = 'Join | Chatter'
+        var room = io.sockets.adapter.rooms['React & Redux'].length;
+        console.log(room);
     }
 
     toggleDropDown() {
