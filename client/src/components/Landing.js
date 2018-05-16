@@ -33,8 +33,6 @@ class Landing extends React.Component {
 
     componentWillMount() {
         document.title = 'Join | Chatter'
-        var room = io.sockets.adapter.rooms['React & Redux'].length;
-        console.log(room);
     }
 
     toggleDropDown() {
