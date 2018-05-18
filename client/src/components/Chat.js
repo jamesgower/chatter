@@ -12,7 +12,7 @@ class Chat extends React.Component {
         super(props);
 
         this.state = {
-            endpoint: process.env.PORT || 'ws://localhost:5000'
+            endpoint: process.env.PORT || 'http://localhost:5000'
         };
     }
 
