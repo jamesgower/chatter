@@ -17,7 +17,6 @@ class Chat extends React.Component {
     }
 
     componentDidMount() {
-        console.log(process.env.NODE_ENV);
         document.title = `${this.props.params.room} | Chatter`
     }
 
@@ -168,7 +167,7 @@ class Chat extends React.Component {
         return (
             <div className="chat">
                 <div className="chat__sidebar">
-                    <h3>People</h3>
+                    <h3 style={{textDecoration: 'underline'}}>Users</h3>
                     <div id="users"></div>
                 </div>
 

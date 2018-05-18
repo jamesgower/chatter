@@ -11,7 +11,6 @@ import {
     Tooltip
 } from 'reactstrap';
 import Chat from './Chat';
-import io from 'socket.io';
 import {isRealString} from '../server/utils/validation';
 
 class Landing extends React.Component {
