@@ -178,7 +178,7 @@ class Chat extends React.Component {
                             <input name="message" placeholder="Message" autoFocus autoComplete="off"/>
                             <button className="button__chatter" type="submit">Send</button>
                             <button
-                                className="button__chatter"
+                                className="button__chatter location-button"
                                 id="send-location"
                                 onClick={() => onLocationPress()}>Send Location</button>
                         </form>

@@ -197,7 +197,10 @@ h3 {
 		margin-bottom: 10px
 	}
 	.chat__footer button {
-		margin-right: 0
+		font-size: 0.6rem;
+	}
+	.chat__footer .location-button {
+		margin-right: 0;
 	}
 }
 
