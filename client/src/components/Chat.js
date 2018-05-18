@@ -12,11 +12,12 @@ class Chat extends React.Component {
         super(props);
 
         this.state = {
-            endpoint: process.env.PORT || 'http://localhost:5000'
+            endpoint: process.env.NODE_ENV === 'production' ? process.env.PORT : 'http://localhost:5000'
         };
     }
 
     componentDidMount() {
+        console.log(process.env.NODE_ENV);
         document.title = `${this.props.params.room} | Chatter`
     }
 
