@@ -193,14 +193,12 @@ h3 {
 	.chat__footer {
 		flex-direction: column
 	}
-	.chat__footer form {
-		margin-bottom: 10px
-	}
 	.chat__footer button {
-		font-size: 0.6rem;
+		font-size: 0.7rem;
 	}
 	.chat__footer .location-button {
 		margin-right: 0;
+		width: 100px !important;
 	}
 }
 

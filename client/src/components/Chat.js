@@ -177,6 +177,7 @@ class Chat extends React.Component {
                         <form onSubmit={(e) => onTextSubmit(e)}>
                             <input name="message" placeholder="Message" autoFocus autoComplete="off"/>
                             <button className="button__chatter" type="submit">Send</button>
+                            <br className="visible-sm" />
                             <button
                                 className="button__chatter location-button"
                                 id="send-location"

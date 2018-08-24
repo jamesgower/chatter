@@ -46,8 +46,7 @@ io.on('connection', socket => {
             socket
                 .broadcast
                 .emit('newMessage', generateMessage(user.name, message.text));
-            socket
-                .emit('newMessageSent', generateMessage(user.name, message.text));
+            socket.emit('newMessageSent', generateMessage(user.name, message.text));
         }
         callback();
     });

@@ -68,7 +68,7 @@ class Landing extends React.Component {
         this.setState({name: e.target.value});
     }
 
-    render() {
+    render() {    
         if (!this.state.submitted) {
             return (
                 <div className="centered-form">
@@ -102,7 +102,7 @@ class Landing extends React.Component {
                                         <DropdownItem value="Discuss" onClick={(e) => this.onRoomChange(e)}>Discuss</DropdownItem>
                                         <DropdownItem value="Design Ideas" onClick={(e) => this.onRoomChange(e)}>Design Ideas</DropdownItem>
                                         <DropdownItem divider/>
-                                        <DropdownItem>Chill Zone</DropdownItem>
+                                        <DropdownItem value="Chill Zone" onClick={(e) => this.onRoomChange(e)}>Chill Zone</DropdownItem>
                                     </DropdownMenu>
                                 </InputGroupButtonDropdown>
                             </InputGroup>
