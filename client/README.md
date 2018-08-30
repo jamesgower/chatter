@@ -18,4 +18,41 @@ When the application is opened you will be greeted with a form where you must ch
 
 All of the chat rooms have the same features and functionality, such as being able to send messages to all people in the room, and also to be able to send your current location to everybody in the room. Both actions can be achieved by clicking the respective button in the bottom right of the application, next to the text box.
 
-Pressing the "Send Location" button will send a link to all others in the chat room which can be clicked to open up a Google Maps view of your current location. It does this by using the users' longitude and latitude, which will only work if the user allows location tracking features in the browser. Older browsers such as Internet Explorer may not allow these features to work properly.  
+Pressing the "Send Location" button will send a link to all others in the chat room which can be clicked to open up a Google Maps view of your current location. It does this by using the users' longitude and latitude, which will only work if the user allows location tracking features in the browser. Older browsers such as Internet Explorer may not allow these features to work properly.
+
+## Technologies
+
+### Front-End
+
+- Bootstrap
+- jQuery
+- Moment
+- Moment
+- Mustache (Template Rendering)
+- React (Create-React-App)
+- React DOM
+- React-Router-DOM
+- Reactstrap
+- Socket.IO
+- uWebSockets
+
+### Back-End
+
+- Axios
+- Concurrently
+- Express (Node.js)
+- Moment
+- Nodemon
+- Require.js
+- Socket.IO
+
+### Deployment
+
+- Heroku
+- Heroku CLI
+
+### Testing
+
+- Expect
+- Mocha
+- Jest
