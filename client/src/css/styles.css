@@ -1,3 +1,4 @@
+/* Buttons */
 .button__chatter,
 .button__chatter:hover {
 	border: none;
@@ -5,6 +6,22 @@
 	padding: 10px
 }
 
+.button__chatter {
+	background: #265f82;
+	cursor: pointer;
+	transition: background .3s ease
+}
+
+.button__chatter:hover {
+	background: #1F4C69
+}
+
+.button__chatter:disabled {
+	cursor: default;
+	background: #698ea5
+}
+
+/* Text */
 .timestamp {
 	color: rgb(66, 66, 66) !important;
 	float: right !important;
@@ -43,21 +60,7 @@ h3 {
 	font-size: 1.5rem
 }
 
-.button__chatter {
-	background: #265f82;
-	cursor: pointer;
-	transition: background .3s ease
-}
-
-.button__chatter:hover {
-	background: #1F4C69
-}
-
-.button__chatter:disabled {
-	cursor: default;
-	background: #698ea5
-}
-
+/* Layout */
 .centered-form {
 	display: flex;
 	align-items: center;
@@ -176,6 +179,7 @@ h3 {
 .message__title h4 {
 	font-weight: 600;
 	margin-right: 10px;
+	padding-right: 5px;
 	font-size: 16px;
 }
 
@@ -183,6 +187,7 @@ h3 {
 	color: #999;
 }
 
+/* Mobile Layout */
 @media (max-width:600px) {
 	* {
 		font-size: 1rem
@@ -202,6 +207,7 @@ h3 {
 	}
 }
 
+/* Message Styles */
 .message {
 	position: relative;
 	background: #0eff0293;
