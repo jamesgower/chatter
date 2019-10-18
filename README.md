@@ -1,14 +1,26 @@
 # Chatter
 
-Chatter is a chat application which was built to bring developers together in discussing the latest technologies used in the JavaScript world. There are many chat rooms to choose from, such as React & Redux, ES6+ JavaScript, New Frameworks, Discuss, Design Ideas & finally a Chill Zone. You can also create an unlimited amount of rooms by using the textbox provided, and getting your peers to join the same room!
+Chatter is a chat application which was built to bring developers together in 
+discussing the latest technologies used in the JavaScript world. 
+There are many chat rooms to choose from, such as React & Redux, ES6+ JavaScript, 
+New Frameworks, Discuss, Design Ideas & finally a Chill Zone. 
+You can also create an unlimited amount of rooms by using the textbox provided, 
+and getting your peers to join the same room!
 
 ## Installation
 
-If you are looking to view/make changes to the existing codebase, then cloning the repository is the best way to achieve this. To do this navigate to a suitable directory, and run `git clone https://github.com/jamesgower/chatter.git` from the terminal. Once the repository is cloned, you can navigate to the repository and run `npm install` to install all of the dependencies. To run the application, you can run `npm run dev` from the root directory, and a local version of the application can be accessed from accessing localhost:3000 from your browser.
+If you are looking to view/make changes to the existing codebase, then cloning the 
+repository is the best way to achieve this. To do this navigate to a suitable directory, 
+and run `git clone https://github.com/jamesgower/chatter.git` from the terminal. 
+Once the repository is cloned, you can navigate to the repository and run `npm install` 
+to install all of the dependencies. To run the application, you can run `npm run dev` 
+from the root directory, and a local version of the application can be accessed from 
+accessing localhost:8080 from your browser.
 
 ## Usage
 
-To use the application, it can be accessed from [this](https://node-chatter-app.herokuapp.com/) link. The application is currently being hosted on Heroku's free plan, so it may take a few seconds to load up on first launch, so please be patient while it loads. Once development is fully completed, the application will be hosted on it's own server to avoid these situations in the future.
+To use the application, it can be accessed from 
+[this](https://www.james-gower.dev/chatter), or by installing it with the above method.
 
 ### Joining a Room
 
@@ -24,32 +36,23 @@ Pressing the "Send Location" button will send a link to all others in the chat r
 
 ### Front-End
 
-- Bootstrap
-- jQuery
-- Moment
-- Moment
-- Mustache (Template Rendering)
-- React (Create-React-App)
-- React DOM
-- React-Router-DOM
+- React
+- Redux
+- TypeScript
 - Reactstrap
-- Socket.IO
-- uWebSockets
+- Socket.IO-Client
+- WebSockets
 
 ### Back-End
 
+- Express (Node.js)
 - Axios
 - Concurrently
-- Express (Node.js)
-- Moment
-- Nodemon
-- Require.js
 - Socket.IO
 
 ### Deployment
 
 - Heroku
-- Heroku CLI
 
 ### Testing
 
