@@ -1,0 +1,45 @@
+.send__container {
+  display: flex;
+  flex-shrink: 0;
+  li {
+    background: #e6eaee;
+    padding: 10px;
+  }
+
+  input {
+    padding: 10px;
+    flex-grow: 1;
+    margin: 0 5px;
+  }
+
+  .send__form {
+    flex-grow: 1;
+    display: flex;
+    margin: 2px;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    .button__location {
+      margin-right: 0;
+      width: 100px !important;
+    }
+  }
+}
+
+.button__chatter {
+  background: #265f82;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+  &:hover {
+    background: #1f4c69;
+  }
+  &:disabled {
+    cursor: default;
+    background: #698ea5;
+  }
+}

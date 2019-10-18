@@ -1,0 +1,36 @@
+.chat__container {
+  display: flex;
+
+  box-sizing: border-box;
+  font-family: HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+    Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+
+  ol {
+    padding: 5px !important;
+  }
+
+  p {
+    margin: 0 !important;
+  }
+
+  li,
+  ul {
+    list-style-position: inside;
+  }
+}
+
+.chat__main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.chat__messages {
+  flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+}

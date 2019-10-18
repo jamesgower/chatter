@@ -1,32 +1,35 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true,
-        "jquery": true,
-        "jest": true
-    },
-    "extends": "eslint:recommended",
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true,
-            "arrowFunctions": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": ["react", "jquery", "dollar-sign"],
-    "rules": {
-        "indent": [0, "tab"],
-        "linebreak-style": [0, "windows"],
-        "quotes": [0, "single"],
-        "semi": ["error", "always"],
-        "react/no-unknown-property": 2,
-        "react/jsx-uses-vars": 2,
-        "react/jsx-uses-react": 2,
-        "react/jsx-indent": [2, "tab"],
-        "dollar-sign/dollar-sign": [0, "ignoreProperties"],
-        "no-console": 0
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "commonjs": true
+  },
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "no-nested-ternary": "off",
+    "no-shadow": "off",
+    "no-unused-expressions": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
     }
+  },
+  "parser": "@typescript-eslint/parser"
 }
